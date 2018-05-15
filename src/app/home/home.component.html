@@ -1,0 +1,12 @@
+<a routerLink = '/product'> + Add Product</a>
+<h2>Product</h2>
+<table>
+	<td>ID</td>
+	<td>Name</td>
+	<td>Color</td>
+	<tr *ngFor = "let product of products">
+		<td>{{product.id}}</td>
+		<td>{{product.name}}</td>
+		<td>{{product.color}}</td>
+	</tr>
+</table>
