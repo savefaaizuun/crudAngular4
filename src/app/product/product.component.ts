@@ -11,16 +11,19 @@ export class ProductComponent implements OnInit {
   constructor(private http:Http) { }
   productObj:object = {};
 
-  addNewProduct = function(product) {
+  addNewProduct2 = function(product) {
     this.productObj = {
       "name": product.name,
       "color": product.color
     }
-    this.http.post("http://localhost:5555/products/", this.productObj).subscribe;{(res:Response) => {
-      console.log(res);
-      }
+
+    this.http.post("http://localhost:5555/products/", this.productObj).subscribe(
+      (res: Response) => {
+        // this.products = res.json();
+        console.log(res)
+      })
     }
-  }
+
 
   ngOnInit() {
   }
